@@ -1,4 +1,4 @@
-# TGATE SDXL Image Generation Project
+# TGATE SDXL Image Generation
 
 This project implements an image generation pipeline using the Stable Diffusion XL model with TGATE (Text-Guided Attention for Efficient Text-to-Image Generation) and TCD (Temporal Coherence Diffusion) scheduling.
 
