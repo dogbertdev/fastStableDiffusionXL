@@ -1,14 +1,7 @@
 import torch
 import os
 from diffusers.pipelines.stable_diffusion_xl.pipeline_stable_diffusion_xl import StableDiffusionXLPipeline
-from tgate import TgateSDXLLoader
-from scheduling_tcd import TCDScheduler 
-import torchvision.transforms.functional as F
-# from torchvision import transforms
-# import inspect
-# from PIL import Image
-# import numpy as np
-# from spandrel import ImageModelDescriptor, ModelLoader
+from functions import TgateSDXLLoader, TCDScheduler
 
 # Get the directory of the current script
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -72,18 +65,4 @@ with torch.no_grad():
 
 
 image.save("image.png")
-# upscale_model_path = os.path.join(script_dir, "4x_foolhardy_Remacri.pth")
-# model = ModelLoader().load_from_file(upscale_model_path)
-# model.to(torch.device(device)).eval()
-# transform = transforms.ToTensor()
-# image_tensor = transform(image)
-# image_tensor = image_tensor.to(device)
-# with torch.no_grad():
-#     image_tensor = image_tensor.unsqueeze(0)
-#     upscaled_image_tensor = model(image_tensor)
-
-# image_tensor = upscaled_image_tensor.squeeze(0)
-# upscaled_image = F.to_pil_image(image_tensor)
-# upscaled_image = upscaled_image.resize((width * model.scale, height * model.scale))
-# upscaled_image.save("upscaled.png")
 
